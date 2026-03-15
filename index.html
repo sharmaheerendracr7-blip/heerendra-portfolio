@@ -3,191 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heerendra Sharma | Front-End Developer</title>
+<title>Heerendra Sharma | Developer</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
-    --bg:#ffffff;
-    --text:#111;
-    --card:#f3f3f3;
-}
-
-body.dark{
-    --bg:#0f172a;
-    --text:#f1f5f9;
-    --card:#1e293b;
-}
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:var(--bg);
-    color:var(--text);
-    transition:0.3s;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
 }
 
-header{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-    animation:fadeIn 1.2s ease-in-out;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
 }
 
-header h1{
-    font-size:3rem;
-    font-weight:700;
+nav h2{
+color:#38bdf8;
 }
 
-header h2{
-    margin:10px 0;
-    color:gray;
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.hero span{
+color:#38bdf8;
 }
 
 .btn{
-    margin-top:15px;
-    padding:12px 25px;
-    background:#111;
-    color:#fff;
-    text-decoration:none;
-    border-radius:30px;
-    transition:0.3s;
-    display:inline-block;
-}
-
-.btn:hover{
-    opacity:0.8;
-}
-
-.toggle{
-    position:fixed;
-    top:20px;
-    right:20px;
-    cursor:pointer;
-    font-size:14px;
-    padding:8px 15px;
-    background:#111;
-    color:#fff;
-    border-radius:20px;
+margin-top:20px;
+padding:12px 25px;
+background:#38bdf8;
+border:none;
+border-radius:30px;
+color:black;
+font-weight:600;
+text-decoration:none;
 }
 
 section{
-    padding:70px 10%;
+padding:80px 10%;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:2rem;
+text-align:center;
+font-size:2rem;
+margin-bottom:40px;
 }
 
-.skills, .projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 }
 
-.card{
-    background:var(--card);
-    padding:20px;
-    border-radius:10px;
-    transition:0.3s;
-    opacity:0;
-    transform:translateY(20px);
+.skill-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
 }
 
-.card.show{
-    opacity:1;
-    transform:translateY(0);
+.skill-card:hover{
+transform:translateY(-5px);
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:scale(1.05);
 }
 
 footer{
-    text-align:center;
-    padding:30px;
-    background:#111;
-    color:#fff;
-}
-
-@keyframes fadeIn{
-    from{opacity:0;}
-    to{opacity:1;}
+text-align:center;
+padding:30px;
+background:black;
+margin-top:40px;
 }
 
 </style>
 </head>
+
 <body>
 
-<div class="toggle" onclick="toggleMode()">Dark Mode</div>
+<nav>
+<h2>Heerendra</h2>
 
-<header>
-    <h1>Heerendra Sharma</h1>
-    <h2>Front-End Web Developer</h2>
-    <p>Building responsive, high-performance and user-centric web experiences.</p>
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="Heerendra_Sharma_ATS_Resume_Final.pdf" class="btn" download>Download Resume</a>
-</header>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
 
-<section>
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="skills">
-        <div class="card"><h3>Languages</h3><p>HTML5, CSS3, JavaScript</p></div>
-        <div class="card"><h3>Concepts</h3><p>Responsive Design, Flexbox, CSS Grid</p></div>
-        <div class="card"><h3>Tools</h3><p>Git, GitHub, VS Code</p></div>
-    </div>
+</nav>
+
+<section class="hero">
+
+<h1>Hi, I'm <span>Heerendra Sharma</span></h1>
+
+<h3 id="typing"></h3>
+
+<a href="#projects" class="btn">View Projects</a>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p style="text-align:center;max-width:700px;margin:auto;">
+Motivated Front-End Developer skilled in HTML, CSS and JavaScript.
+Passionate about building responsive and user-focused web applications.
+</p>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill-card">HTML5</div>
+<div class="skill-card">CSS3</div>
+<div class="skill-card">JavaScript</div>
+<div class="skill-card">Responsive Design</div>
+<div class="skill-card">Git & GitHub</div>
+<div class="skill-card">VS Code</div>
+
+</div>
+
 </section>
 
 <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects">
-        <div class="card"><h3>Portfolio Website</h3><p>Fully responsive personal portfolio.</p></div>
-        <div class="card"><h3>E-Commerce Web App</h3><p>Dynamic cart & product filtering.</p></div>
-        <div class="card"><h3>Task Management App</h3><p>CRUD + Local Storage integration.</p></div>
-        <div class="card"><h3>Weather App</h3><p>API integration using Fetch API.</p></div>
-        <div class="card"><h3>Landing Page Optimization</h3><p>Conversion-focused UI design.</p></div>
-    </div>
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>Fully responsive personal portfolio.</p>
+</div>
+
+<div class="project-card">
+<h3>E-Commerce Web App</h3>
+<p>Dynamic cart & product filtering.</p>
+</div>
+
+<div class="project-card">
+<h3>Task Management App</h3>
+<p>CRUD operations with Local Storage.</p>
+</div>
+
+<div class="project-card">
+<h3>Weather App</h3>
+<p>API integration using Fetch API.</p>
+</div>
+
+</div>
+
 </section>
 
-<section>
-    <h2 class="section-title">Contact</h2>
-    <p style="text-align:center;">
-        Jaipur, Rajasthan <br>
-        +91 8905643678 <br>
-        Sharmaheerendracr7@gmail.com <br>
-        linkedin.com/in/heerendra-sharma-0407143a6
-    </p>
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<p style="text-align:center;">
+📍 Jaipur, India <br>
+📧 Sharmaheerendracr7@gmail.com <br>
+📞 8905643678
+</p>
+
 </section>
 
 <footer>
-    © 2026 Heerendra Sharma | All Rights Reserved
+
+<p>© 2026 Heerendra Sharma</p>
+
 </footer>
 
 <script>
 
-function toggleMode(){
-    document.body.classList.toggle("dark");
+const text = "Front-End Developer | Web Enthusiast";
+let i = 0;
+
+function typing(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,70);
+}
 }
 
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", ()=>{
-    cards.forEach(card=>{
-        const cardTop = card.getBoundingClientRect().top;
-        if(cardTop < window.innerHeight - 50){
-            card.classList.add("show");
-        }
-    });
-});
+typing();
 
 </script>
 
