@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heerendra Sharma | Developer</title>
-
+<title>Heerendra Sharma | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -18,7 +16,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#0f172a,#1e293b);
+background:#0f172a;
 color:white;
 }
 
@@ -27,21 +25,15 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 10%;
-background:rgba(0,0,0,0.3);
-backdrop-filter:blur(10px);
+background:#020617;
 position:fixed;
 width:100%;
 }
 
-nav h2{
-color:#38bdf8;
-}
-
 nav a{
 color:white;
-margin-left:20px;
 text-decoration:none;
-font-weight:500;
+margin-left:20px;
 }
 
 .hero{
@@ -51,7 +43,6 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
 }
 
 .hero h1{
@@ -62,43 +53,27 @@ font-size:3rem;
 color:#38bdf8;
 }
 
-.btn{
-margin-top:20px;
-padding:12px 25px;
-background:#38bdf8;
-border:none;
-border-radius:30px;
-color:black;
-font-weight:600;
-text-decoration:none;
-}
-
 section{
 padding:80px 10%;
 }
 
-.section-title{
+.title{
 text-align:center;
-font-size:2rem;
 margin-bottom:40px;
+font-size:2rem;
 }
 
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:20px;
 }
 
-.skill-card{
+.skill{
 background:#1e293b;
-padding:20px;
-border-radius:10px;
+padding:15px;
 text-align:center;
-transition:0.3s;
-}
-
-.skill-card:hover{
-transform:translateY(-5px);
+border-radius:8px;
 }
 
 .projects{
@@ -107,143 +82,106 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-.project-card{
+.project{
 background:#1e293b;
 padding:20px;
 border-radius:10px;
-transition:0.3s;
 }
 
-.project-card:hover{
-transform:scale(1.05);
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 15px;
+background:#38bdf8;
+color:black;
+border-radius:5px;
+text-decoration:none;
 }
 
 footer{
 text-align:center;
-padding:30px;
-background:black;
-margin-top:40px;
+padding:20px;
+background:#020617;
 }
-
 </style>
 </head>
 
 <body>
 
 <nav>
-<h2>Heerendra</h2>
-
+<h3>Heerendra</h3>
 <div>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </div>
-
 </nav>
 
 <section class="hero">
-
-<h1>Hi, I'm <span>Heerendra Sharma</span></h1>
-
-<h3 id="typing"></h3>
-
-<a href="#projects" class="btn">View Projects</a>
-
+<h1>Hello, I'm <span>Heerendra Sharma</span></h1>
+<p>Front-End Web Developer</p>
 </section>
 
 <section id="about">
-
-<h2 class="section-title">About Me</h2>
-
+<h2 class="title">About Me</h2>
 <p style="text-align:center;max-width:700px;margin:auto;">
-Motivated Front-End Developer skilled in HTML, CSS and JavaScript.
-Passionate about building responsive and user-focused web applications.
+Motivated Front-End Developer skilled in HTML, CSS and JavaScript. 
+Passionate about building responsive and modern web applications.
 </p>
-
 </section>
 
 <section id="skills">
-
-<h2 class="section-title">Skills</h2>
-
+<h2 class="title">Skills</h2>
 <div class="skills">
-
-<div class="skill-card">HTML5</div>
-<div class="skill-card">CSS3</div>
-<div class="skill-card">JavaScript</div>
-<div class="skill-card">Responsive Design</div>
-<div class="skill-card">Git & GitHub</div>
-<div class="skill-card">VS Code</div>
-
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Git</div>
+<div class="skill">GitHub</div>
+<div class="skill">Responsive Design</div>
 </div>
-
 </section>
 
 <section id="projects">
-
-<h2 class="section-title">Projects</h2>
-
+<h2 class="title">Projects</h2>
 <div class="projects">
 
-<div class="project-card">
+<div class="project">
 <h3>Portfolio Website</h3>
-<p>Fully responsive personal portfolio.</p>
+<p>Personal responsive portfolio.</p>
+<a href="#" class="btn">Live</a>
+<a href="#" class="btn">Code</a>
 </div>
 
-<div class="project-card">
-<h3>E-Commerce Web App</h3>
-<p>Dynamic cart & product filtering.</p>
+<div class="project">
+<h3>E-Commerce App</h3>
+<p>Product listing and cart functionality.</p>
+<a href="#" class="btn">Live</a>
+<a href="#" class="btn">Code</a>
 </div>
 
-<div class="project-card">
-<h3>Task Management App</h3>
-<p>CRUD operations with Local Storage.</p>
-</div>
-
-<div class="project-card">
+<div class="project">
 <h3>Weather App</h3>
-<p>API integration using Fetch API.</p>
+<p>Weather API integration project.</p>
+<a href="#" class="btn">Live</a>
+<a href="#" class="btn">Code</a>
 </div>
 
 </div>
-
 </section>
 
 <section id="contact">
-
-<h2 class="section-title">Contact</h2>
-
-<p style="text-align:center;">
-📍 Jaipur, India <br>
+<h2 class="title">Contact</h2>
+<p style="text-align:center">
 📧 Sharmaheerendracr7@gmail.com <br>
 📞 8905643678
 </p>
-
 </section>
 
 <footer>
-
 <p>© 2026 Heerendra Sharma</p>
-
 </footer>
-
-<script>
-
-const text = "Front-End Developer | Web Enthusiast";
-let i = 0;
-
-function typing(){
-if(i < text.length){
-document.getElementById("typing").innerHTML += text.charAt(i);
-i++;
-setTimeout(typing,70);
-}
-}
-
-typing();
-
-</script>
 
 </body>
 </html>
