@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heerendra Sharma | Portfolio</title>
+
+<title>Heerendra Sharma | Developer</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -19,6 +22,8 @@ body{
 background:#0f172a;
 color:white;
 }
+
+/* NAVBAR */
 
 nav{
 display:flex;
@@ -34,7 +39,10 @@ nav a{
 color:white;
 text-decoration:none;
 margin-left:20px;
+font-size:14px;
 }
+
+/* HERO */
 
 .hero{
 height:100vh;
@@ -43,6 +51,14 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding:20px;
+}
+
+.hero img{
+width:150px;
+border-radius:50%;
+border:4px solid #38bdf8;
+margin-bottom:20px;
 }
 
 .hero h1{
@@ -53,6 +69,26 @@ font-size:3rem;
 color:#38bdf8;
 }
 
+.hero p{
+margin-top:10px;
+color:#cbd5f5;
+}
+
+/* SOCIAL */
+
+.social{
+margin-top:20px;
+}
+
+.social a{
+margin:0 10px;
+text-decoration:none;
+color:#38bdf8;
+font-weight:600;
+}
+
+/* SECTION */
+
 section{
 padding:80px 10%;
 }
@@ -62,6 +98,8 @@ text-align:center;
 margin-bottom:40px;
 font-size:2rem;
 }
+
+/* SKILLS */
 
 .skills{
 display:grid;
@@ -75,6 +113,8 @@ padding:15px;
 text-align:center;
 border-radius:8px;
 }
+
+/* PROJECTS */
 
 .projects{
 display:grid;
@@ -96,92 +136,170 @@ background:#38bdf8;
 color:black;
 border-radius:5px;
 text-decoration:none;
+font-size:14px;
 }
+
+/* CONTACT */
 
 footer{
 text-align:center;
 padding:20px;
 background:#020617;
+margin-top:30px;
 }
+
 </style>
 </head>
 
 <body>
 
 <nav>
+
 <h3>Heerendra</h3>
+
 <div>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </div>
+
 </nav>
 
+<!-- HERO -->
+
 <section class="hero">
-<h1>Hello, I'm <span>Heerendra Sharma</span></h1>
-<p>Front-End Web Developer</p>
+
+<img src="profile.jpg" alt="Heerendra">
+
+<h1>Hello I'm <span>Heerendra Sharma</span></h1>
+
+<p id="typing"></p>
+
+<div class="social">
+
+<a href="https://instagram.com/heerendra.7">Instagram</a>
+<a href="https://github.com/sharmaheerendracr7-blip">GitHub</a>
+<a href="https://linkedin.com">LinkedIn</a>
+
+</div>
+
 </section>
+
+<!-- ABOUT -->
 
 <section id="about">
+
 <h2 class="title">About Me</h2>
+
 <p style="text-align:center;max-width:700px;margin:auto;">
-Motivated Front-End Developer skilled in HTML, CSS and JavaScript. 
+Motivated Front-End Developer skilled in HTML, CSS and JavaScript.
 Passionate about building responsive and modern web applications.
 </p>
+
 </section>
 
+<!-- SKILLS -->
+
 <section id="skills">
+
 <h2 class="title">Skills</h2>
+
 <div class="skills">
+
 <div class="skill">HTML</div>
 <div class="skill">CSS</div>
 <div class="skill">JavaScript</div>
 <div class="skill">Git</div>
 <div class="skill">GitHub</div>
 <div class="skill">Responsive Design</div>
+
 </div>
+
 </section>
 
+<!-- PROJECTS -->
+
 <section id="projects">
+
 <h2 class="title">Projects</h2>
+
 <div class="projects">
 
 <div class="project">
+
 <h3>Portfolio Website</h3>
-<p>Personal responsive portfolio.</p>
+
+<p>Personal responsive portfolio website.</p>
+
 <a href="#" class="btn">Live</a>
 <a href="#" class="btn">Code</a>
+
 </div>
 
 <div class="project">
-<h3>E-Commerce App</h3>
+
+<h3>E-Commerce Web App</h3>
+
 <p>Product listing and cart functionality.</p>
+
 <a href="#" class="btn">Live</a>
 <a href="#" class="btn">Code</a>
+
 </div>
 
 <div class="project">
+
 <h3>Weather App</h3>
+
 <p>Weather API integration project.</p>
+
 <a href="#" class="btn">Live</a>
 <a href="#" class="btn">Code</a>
+
 </div>
 
 </div>
+
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact">
+
 <h2 class="title">Contact</h2>
+
 <p style="text-align:center">
+
 📧 Sharmaheerendracr7@gmail.com <br>
 📞 8905643678
+
 </p>
+
 </section>
 
 <footer>
+
 <p>© 2026 Heerendra Sharma</p>
+
 </footer>
+
+<script>
+
+const text = "Front-End Developer | Web Enthusiast";
+let i = 0;
+
+function typing(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,60);
+}
+}
+
+typing();
+
+</script>
 
 </body>
 </html>
